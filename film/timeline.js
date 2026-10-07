@@ -1,0 +1,38 @@
+// Shared timeline: used by the renderer and exported to the audio score.
+var CUES = (function () {
+  var C = { bpm: 96, bar: 2.5, beat: 0.625, dur: 102.5, fps: 30 };
+  C.photonAppear = 0.5;
+  C.riserStart = 5.0;
+  C.titleHit = 7.5;
+  C.ringOut = 13.6;
+  C.lightOn = 19.5;
+  C.diveStart = 28.2;
+  C.dive = 30.0;
+  C.chrHits = [35.0, 37.5, 40.0, 41.25, 42.5, 43.125, 43.75, 44.375];
+  C.photonTravel = 0.45;
+  C.chrBg = [[36.1, 1], [38.2, 2], [39.4, 3], [40.6, 5], [41.9, 1], [42.8, 6], [43.4, 2], [44.0, 3], [44.7, 4]];
+  var P = [50.0, 51.25, 52.5, 53.125, 53.75, 54.375];
+  var i;
+  for (i = 0; i < 8; i++) P.push(55 + i * 0.3125);
+  for (i = 0; i < 8; i++) P.push(57.5 + i * 0.3125);
+  P.push(59.84375);
+  for (i = 0; i < 8; i++) P.push(60 + i * 0.15625);
+  for (i = 0; i < 14; i++) P.push(61.25 + i * 0.078125);
+  C.pulses = P;
+  C.spikeLatency = 0.012;
+  C.dnaStart = 45.0;
+  C.fiberIn = 48.8;
+  C.drop = 62.5;
+  C.apps = [67.5, 68.75, 70.0, 71.25, 72.5];
+  C.eyeStart = 75.0;
+  C.eyeLight = 76.25;
+  C.lauStart = 80.0;
+  C.names = [80.6, 81.85, 83.1];
+  C.link = 84.0;
+  C.motivation = 85.6;
+  C.converge = 92.5;
+  C.finaleHit = 95.0;
+  C.fadeOut = 100.6;
+  return C;
+})();
+if (typeof module !== 'undefined') module.exports = CUES;

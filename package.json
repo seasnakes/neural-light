@@ -1,0 +1,13 @@
+{
+  "name": "neural-light",
+  "version": "1.0.0",
+  "private": true,
+  "description": "神经之光：WebGL2 科学短片与程序合成配乐",
+  "scripts": {
+    "render": "node film/render.mjs",
+    "stills": "node film/render.mjs --stills=12,20,38,58,68,86,99",
+    "preview": "python3 -m http.server 8080 --bind 127.0.0.1"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": { "playwright": "1.62.1" }
+}
